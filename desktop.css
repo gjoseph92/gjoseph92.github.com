@@ -1,4 +1,19 @@
-body, html { margin: 0;
+body, html { margin: 30px;
 			 padding: 0;
-			 color: #272523;
-			 background: #F8F6EE; }
+			 color: #373430;
+			 background: #FFFFFF;
+			 font-family: 'Open Sans', sans-serif;
+			 font-size: 12pt; }
+			
+h2 { font-size: 24pt;
+	 margin: 0px; }
+h3 { font-size: 16px;
+	 margin-bottom: 0.2em; }
+			
+div#contact { float: left;
+	 		  width: 260px; 
+			  border: 15px;}
+div#resume { float: left;
+			 position: relative; }
+			
+ul { margin-top: 0.2em; }
