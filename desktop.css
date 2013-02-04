@@ -3,17 +3,35 @@ body, html { margin: 30px;
 			 color: #373430;
 			 background: #FFFFFF;
 			 font-family: 'Open Sans', sans-serif;
-			 font-size: 12pt; }
+			 font-size: 12pt;
+			 line-height: 1.6em; }
 			
 h2 { font-size: 24pt;
 	 margin: 0px; }
-h3 { font-size: 16px;
-	 margin-bottom: 0.2em; }
+h3 { font-size: 16px; }
+ul { margin-top: 0.2em; }
 			
 div#contact { float: left;
 	 		  width: 260px; 
-			  border: 15px;}
+			  border: 15px;
+			  font-family: 'Lora', serif; }
 div#resume { float: left;
 			 position: relative; }
 			
-ul { margin-top: 0.2em; }
+h3.res-heading { margin: 0em;
+				 margin-top: 0.2em;
+	 			 margin-bottom:0.2em; }
+			
+ul.res-section { list-style: none;
+				 margin: 0;
+				 padding: 0;}
+				
+ul.res-description { list-style: none;
+					 margin-bottom: 0.8em;
+					 font-weight: 300; }
+					
+.res-description li { border-left: 1px solid #C0C0C0;
+	 				  padding-left: 3px; }
+	
+.res-employer { font-weight: bold; }
+.res-position { }
