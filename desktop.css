@@ -6,6 +6,11 @@ body, html { margin: 30px;
 			 font-size: 12pt;
 			 line-height: 1.6em; }
 			
+a:link, a:visited { text-decoration: none;
+	 				color: #3E6CE9; }
+a:hover { text-decoration: underline;
+		   color: #365ECB; }
+			
 h2 { font-size: 48pt;
 	 margin: 0px;
 	 line-height: 1em; }
@@ -14,15 +19,14 @@ ul { margin-top: 0.2em; }
 			
 div#contact { float: left;
 	 		  width: 260px; 
-			  border: 15px;
-			  font-family: 'Lora', serif;
-			  color: #C10E09; }
+			  border: 15px; }
 div#resume { float: left;
 			 position: relative; }
 			
 h3.res-heading { margin: 0em;
 				 margin-top: 0.2em;
-	 			 margin-bottom:0.2em; }
+	 			 margin-bottom:0.2em;
+	 			 color: #C10E09; }
 			
 ul.res-section { list-style: none;
 				 margin: 0;
