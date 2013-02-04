@@ -2,19 +2,21 @@ body, html { margin: 30px;
 			 padding: 0;
 			 color: #373430;
 			 background: #FFFFFF;
-			 font-family: 'Open Sans', sans-serif;
+			 font-family: 'Helvetica', sans-serif;
 			 font-size: 12pt;
 			 line-height: 1.6em; }
 			
-h2 { font-size: 24pt;
-	 margin: 0px; }
-h3 { font-size: 16px; }
+h2 { font-size: 48pt;
+	 margin: 0px;
+	 line-height: 1em; }
+h3 { font-size: 20px; }
 ul { margin-top: 0.2em; }
 			
 div#contact { float: left;
 	 		  width: 260px; 
 			  border: 15px;
-			  font-family: 'Lora', serif; }
+			  font-family: 'Lora', serif;
+			  color: #C10E09; }
 div#resume { float: left;
 			 position: relative; }
 			
@@ -31,7 +33,8 @@ ul.res-description { list-style: none;
 					 font-weight: 300; }
 					
 .res-description li { border-left: 1px solid #C0C0C0;
-	 				  padding-left: 3px; }
+	 				  padding-left: 5px; }
 	
 .res-employer { font-weight: bold; }
 .res-position { }
+.res-date { float: right; }
