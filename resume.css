@@ -27,3 +27,43 @@ ul.res-description { list-style: none;
 .res-date { float: right;
 	 		clear: bottom; }
 .res-date-seperator { word-spacing: 2em; }
+
+#contact tel { display: none; }
+
+@media print {
+	body {
+		/*width: 7.5in;*/
+		/*height: 10.5in;*/
+		/*border: 1px solid black;*/
+		padding: 5px;
+		margin: 0px;
+		/*font-size: 11pt;*/
+		line-height: 1.5em;
+	}
+
+	#contact {
+		width: 100% !important;
+	}
+	#contact > h2 {
+		float: left;
+		display: inline-block;
+		font-size: 48px;
+	}
+	#contact > p {
+		float: right;
+		display: inline-block;
+		font-size: 21px;
+		margin: 21px 5px 0 0;
+		font-weight: 300;
+	}
+	#resume {
+		width: 100% !important;
+	}
+
+	#res-education { display: none; }
+
+	.res-section { margin-bottom: 0.8em !important; }
+
+	#contact tel { display: inline; }
+	#contact tel:before { content: " | "; }
+}
