@@ -30,9 +30,9 @@ ul.res-description { list-style: none;
 
 #contact tel { display: none; }
 
-@media print {
+@media print, screen {
 	body {
-		/*width: 7.5in;*/
+		width: 7.5in;
 		/*height: 10.5in;*/
 		/*border: 1px solid black;*/
 		padding: 5px;
