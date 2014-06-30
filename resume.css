@@ -30,7 +30,7 @@ ul.res-description { list-style: none;
 
 #contact tel { display: none; }
 
-@media print, screen {
+@media print {
 	body {
 		width: 7.5in;
 		/*height: 10.5in;*/
@@ -39,6 +39,7 @@ ul.res-description { list-style: none;
 		margin: 0px;
 		/*font-size: 11pt;*/
 		line-height: 1.5em;
+		-webkit-print-color-adjust: exact;
 	}
 
 	#contact {
@@ -66,4 +67,8 @@ ul.res-description { list-style: none;
 
 	#contact tel { display: inline; }
 	#contact tel:before { content: " | "; }
+
+	.avatech { background-color: #fbe772;
+		   border: 0.5px solid #ceb107;
+		   border-radius: 3px; }
 }
