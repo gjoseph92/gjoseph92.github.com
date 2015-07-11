@@ -5,93 +5,81 @@
 	<link rel="stylesheet" href="rules.css" />
 	<link rel="stylesheet" href="resume.css" />
 	<meta http-equiv="content-type" content="text/html;charset=iso-8859-1" />
+
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.2/angular.min.js"></script>
+	<script src="resume.js"></script>
+
 	<script>
-		window.onload = function() {
+		/*window.onload = function() {
 			if (window.location.hash == "#highlight") {
 				var elems = document.querySelectorAll('.highlight');
 				for (var i = elems.length - 1; i >= 0; i--) {
 					elems[i].className += ' avatech';
 				};
 			}
-		};
+		};*/
 	</script>
 </head>
-<body>
+<body ng-app="resume">
 	<div id="contact">
 		<h2><a href="index.html">Gabe Joseph</a></h2>
 		<p><a href="mailto:gabriel.joseph@tufts.edu">gabriel.joseph@tufts.edu</a><tel>415.419.4841</tel></p>
 	</div>
-	<div id="resume">
+	<div id="resume" ng-controller="resume" ng-cloak>
 		<h3 class="res-heading" id="res-education">Education</h3>
 		<ul class="res-section" id="res-tufts">
 			<li><a href="http://www.tufts.edu" class="subtle">Tufts University</a></li>
 			<li>B.S. Computer Science, expected 2015</li>
 		</ul>
+
 		<h3 class="res-heading">Relevant Courses</h3>
 		<ul class="res-description">
-			<li><span class="highlight">Distributed Systems</span>, <span class="highlight">Machine Learning</span>, <span class="highlight">Visualization</span>, <span class="highlight">Web Programming</span>, <span class="highlight">Computer Vision</span>, <span class="highlight">Algorithms</span>, Operating Systems, Machine Structure &amp; Assembly, Computation Theory, Linear Algebra</li>
+			<li>
+				<span ng-repeat="course in courses | shouldShow:filter">{{course.text}}<span ng-if="!$last">, </span></span>
+			</li>
 		</ul>
+
+
 		<h3 class="res-heading">Experience</h3>
 		<ul class="res-section">
-			<li>
-				<span class="res-employer"><a href="http://www.abinitio.com" class="subtle">Ab Initio Software</a></span>, <span class="res-position">Development intern</span><span class="res-date">6/14 - 8/14</span>
+			<li ng-repeat="experience in experiences | shouldShow:filter">
+				<span class="res-employer">
+					<a class="subtle" ng-href="{{experience.link}}">{{experience.place}}</a></span>,
+				<span class="res-position">{{experience.position}}</span>
+				<span class="res-date">{{experience.dates}}</span>
+
 				<ul class="res-description">
-					<li><span class="highlight">Designed algorithm to find optimal aggregation path in data cubes</span></li>
-					<li>Wrote Python codegeneration library to metaprogram aggregation code for Ab Initio language</li>
-					<li>Wrote test code &amp; integrated with production codebase</li>
-				</ul>
-			</li>
-			<li>
-				<span class="res-employer"><a href="http://www.ceeo.tufts.edu" class="subtle">Center for Engineering Education and Outreach</a></span>, <span class="res-position">Research Assistant</span><span class="res-date">5/13 - 6/14</span>
-				<ul class="res-description">
-					<!-- <li>Consulted with education researchers to improve data collection methods</li> -->
-					<li>Designed &amp; developed system for multiplexed speech &amp; video recording in noisy classrooms</li>
-					<li><span class="highlight">Programmed signal processing algorithm to synchronize concurrent audio and video recordings</span></li>
-					<li>Developed web interface for researchers to view synchronized recordings</li>
-				</ul>
-			</li>
-			<li>
-				<span class="res-employer"><a href="http://www.ceeo.tufts.edu" class="subtle">Center for Engineering Education and Outreach</a></span>, <span class="res-position">Research Assistant</span><span class="res-date">5/12 - 7/12</span>
-				<ul class="res-description">
-					<li><span class="highlight">Created data protocol between Arduinos and optical touchscreens via IR light patterns</span></li>
-					<li>Prototyped Java visualizations to analyze children's interaction with dynamic datasets</li>
-					<!-- <li>Programmed TUIO LabVIEW library for touch interaction</li> -->
+					<li ng-repeat="item in experience.items  | shouldShow:filter">
+						{{item.text}}
+					</li>
 				</ul>
 			</li>
 		</ul>
+
 		<h3 class="res-heading">Skills</h3>
 		<ul class="res-section">
-			<li><span class="res-employer">Languages:</span> Python (<span class="highlight">+SciPy</span>), JavaScript, <span class="highlight">HTML5/CSS3 (+Angular, jQuery)</span>, C, C++, PHP, <span class="highlight">SQL</span>, LabVIEW, Processing (Java), Spanish</li>
-			<li><span class="res-employer">Software:</span> Photoshop, Illustrator, AfterEffects, Premiere, InDesign, Final Cut, Motion</li>
+			<li ng-repeat="(skillCategory, skill) in skills">
+				<span class="res-employer">{{skillCategory}}:</span> 
+				<span ng-repeat="item in skill  | shouldShow:filter">{{item.text}}<span ng-if="! $last">, </span></span>
+			</li>
 		</ul>
+
 		<h3 class="res-heading">Leadership</h3>
 		<ul class="res-section">
-			<li>
-				<span class="res-employer"><a href="http://www.tuftsmountainclub.org/trips" class="subtle">Tufts Mountain Club</a></span>, <span class="res-position"><span class="highlight">Web developer</span></span><span class="res-date">2013 - 2014</span>
-				<ul class="res-description">
-					<li>Create quick-turnaround web services to help club functions</li>
-					<!-- <li>Designed &amp; implemented trips board with signups, van reservations, and payment</li> -->
-					<li>Integrate new systems with old code base and design</li>
-				</ul>
-			</li>
-			<li>
-				<span class="res-employer"><a href="http://www.tuftsmountainclub.org" class="subtle">Tufts Mountain Club</a></span>, <span class="res-position">President</span><span class="res-date">2014</span>
-				<ul class="res-description">
-					<li>Oversee operations of 700-member outdoor club with lodge and vehicles</li>
-					<li>Supervise executive board and delegate responsibilities</li>
-					<li>Collaborate with university administrators to improve club function</li>
-					<li>Develop and lead long-term technical and safety curriculum</li>
-					<!-- <li>Budget income between programs, equipment, facilities, and long-term projects</li> -->
+			<li ng-repeat="experience in leadership  | shouldShow:filter">
+				<span class="res-employer">
+					<a class="subtle" ng-href="{{experience.link}}">{{experience.place}}</a></span>,
+				<span class="res-position">{{experience.position}}</span>
+				<span class="res-date">{{experience.dates}}</span>
 
+				<ul class="res-description" ng-if="experience.items">
+					<li ng-repeat="item in experience.items | shouldShow:filter">
+						{{item.text}}
+					</li>
 				</ul>
 			</li>
-			<!-- <li>
-				<span class="res-employer"><a href="http://www.tuftsmountainclub.org" class="subtle">Tufts Mountain Club</a></span>, <span class="res-position">Technical Skills &amp; Safety director</span><span class="res-date">2011 - 2013</span>
-			</li> -->
-			<!-- <li>
-				<span class="res-employer"><a href="http://www.tufts.edu/programs/tuftswilderness/" class="subtle">Tufts Wilderness Orientation</a></span>, <span class="res-position">trip leader</span><span class="res-date">2013 - 2014</span>
-			</li> -->
 		</ul>
+
 	</div>
 </body>
 </html>
