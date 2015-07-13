@@ -21,12 +21,18 @@ resumeModule.filter("shouldShow", function() {
 });
 
 resumeModule.controller('resume', function($scope, $location) {
-	
+
 	$scope.$watch(function() { return $location.search(); }, function(query) {
 		$scope.filter = ('for' in query) ? query.for : null;
-		$scope.highlight = ('highlight' in query) ? query.highlight : [];
+		$scope.highlight = ('highlight' in query) ? query.highlight : null;
 	});
 
+	$scope.shouldHighlight = function(item) {
+		if ($scope.highlight == null) return false;
+		if ('highlight' in item && angular.isArray(item.highlight)) {
+			return (item.highlight.indexOf($scope.highlight) != -1);
+		}
+	};
 
 	$scope.experiences = [
 		{

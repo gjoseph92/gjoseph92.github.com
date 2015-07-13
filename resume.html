@@ -9,16 +9,6 @@
 	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.2/angular.min.js"></script>
 	<script src="resume.js"></script>
 
-	<script>
-		/*window.onload = function() {
-			if (window.location.hash == "#highlight") {
-				var elems = document.querySelectorAll('.highlight');
-				for (var i = elems.length - 1; i >= 0; i--) {
-					elems[i].className += ' avatech';
-				};
-			}
-		};*/
-	</script>
 </head>
 <body ng-app="resume">
 	<div id="contact">
@@ -35,7 +25,9 @@
 		<h3 class="res-heading">Relevant Courses</h3>
 		<ul class="res-description">
 			<li>
-				<span ng-repeat="course in courses | shouldShow:filter">{{course.text}}<span ng-if="!$last">, </span></span>
+				<span ng-repeat="course in courses | shouldShow:filter">
+					<span ng-class="{highlight: shouldHighlight(course)}">{{course.text}}</span><span ng-if="!$last">, </span>
+				</span>
 			</li>
 		</ul>
 
@@ -50,7 +42,7 @@
 
 				<ul class="res-description">
 					<li ng-repeat="item in experience.items  | shouldShow:filter">
-						{{item.text}}
+						<span ng-class="{highlight: shouldHighlight(item)}">{{item.text}}</span>
 					</li>
 				</ul>
 			</li>
@@ -60,7 +52,9 @@
 		<ul class="res-section">
 			<li ng-repeat="(skillCategory, skill) in skills">
 				<span class="res-employer">{{skillCategory}}:</span> 
-				<span ng-repeat="item in skill  | shouldShow:filter">{{item.text}}<span ng-if="! $last">, </span></span>
+				<span ng-repeat="item in skill  | shouldShow:filter">
+					<span ng-class="{highlight: shouldHighlight(item)}">{{item.text}}</span><span ng-if="! $last">, </span>
+				</span>
 			</li>
 		</ul>
 
@@ -74,7 +68,7 @@
 
 				<ul class="res-description" ng-if="experience.items">
 					<li ng-repeat="item in experience.items | shouldShow:filter">
-						{{item.text}}
+						<span ng-class="{highlight: shouldHighlight(item)}">{{item.text}}</span>
 					</li>
 				</ul>
 			</li>

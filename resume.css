@@ -30,11 +30,11 @@ ul.res-description { list-style: none;
 
 #contact tel { display: none; }
 
-.avatech { background-color: #fbe772;
+.highlight { background-color: #fbe772;
 		   border: 0.5px solid #ceb107;
 		   border-radius: 3px;
 		   transition: background-color 0.05s; }
-.avatech:hover { background-color: rgb(255, 204, 0); }
+.highlight:hover { background-color: rgb(255, 204, 0); }
 
 @media print {
 	body {
@@ -72,7 +72,10 @@ ul.res-description { list-style: none;
 	#res-tufts > li { display: inline-block; }
 	#res-tufts > li:first-child:after { content: " | "; }
 
-	.res-section { margin-bottom: 0.8em !important; }
+	.res-section {
+		margin-bottom: 0.8em !important;
+		page-break-inside: avoid;
+	}
 
 	#contact tel { display: inline; }
 	#contact tel:before { content: " | "; }
