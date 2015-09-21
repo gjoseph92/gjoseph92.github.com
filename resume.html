@@ -27,7 +27,7 @@
 		<ul class="res-description">
 			<li>
 				<span ng-repeat="course in courses | shouldShow:filter">
-					<span ng-class="{highlight: shouldHighlight(course)}">{{course.text}}</span><span ng-if="!$last">, </span>
+					<span ng-class="{highlight: shouldHighlight(course)}">{{course.text}}</span><span ng-if="!$last">,</span>
 				</span>
 			</li>
 		</ul>
@@ -66,7 +66,7 @@
 		<ul class="res-section">
 			<li ng-repeat="experience in leadership  | shouldShow:filter">
 				<span class="res-employer">
-					<a class="subtle" ng-href="{{experience.link}}">{{experience.place}}</a></span>,
+					<a class="subtle" ng-href="{{experience.link}}">{{experience.place}}</a>,</span>
 				<span class="res-position">{{experience.position}}</span>
 				<span class="res-date">{{experience.dates}}</span>
 

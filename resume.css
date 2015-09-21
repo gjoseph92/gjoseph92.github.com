@@ -42,7 +42,8 @@ ul.res-description { list-style: none;
 					 font-weight: 300; }
 					
 .res-description li { border-left: 1px solid #C0C0C0;
-	 				  padding-left: 5px; }
+	 				  padding-left: 10px;
+	 				  text-indent: -5px; }
 	
 .res-employer { font-weight: bold;
 				margin-right: 0.4em }
