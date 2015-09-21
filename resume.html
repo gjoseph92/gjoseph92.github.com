@@ -36,11 +36,14 @@
 		<h3 class="res-heading">Experience</h3>
 		<ul class="res-section">
 			<li ng-repeat="experience in experiences | shouldShow:filter">
-				<span class="res-employer">
-					<a class="subtle" ng-href="{{experience.link}}">{{experience.place}}</a></span>,
-				<span class="res-position">{{experience.position}}</span>
-				<span class="res-date">{{experience.dates}}</span>
-
+				<div class="res-section-heading">
+					<span class="res-employer">
+						<a class="subtle" ng-href="{{experience.link}}">{{experience.place}}</a>, </span>
+					<span class="res-pos-date">
+						<span class="res-position">{{experience.position}}</span>
+						<span class="res-date">{{experience.dates}}</span>
+					</span>
+				</div>
 				<ul class="res-description">
 					<li ng-repeat="item in experience.items  | shouldShow:filter">
 						<span ng-class="{highlight: shouldHighlight(item)}">{{item.text}}</span>

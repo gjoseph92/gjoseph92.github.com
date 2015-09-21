@@ -14,6 +14,16 @@ ul.res-section { list-style: none;
 				 margin: 0;
 				 margin-bottom: 1em;
 				 padding: 0;}
+
+.res-section-heading {
+	display: flex;
+	flex-wrap: wrap;
+}
+.res-pos-date {
+	flex-grow: 1;
+	display: flex;
+	justify-content: space-between;
+}
 				
 ul.res-description { list-style: none;
 					 margin-bottom: 0.8em;
@@ -22,7 +32,8 @@ ul.res-description { list-style: none;
 .res-description li { border-left: 1px solid #C0C0C0;
 	 				  padding-left: 5px; }
 	
-.res-employer { font-weight: bold; }
+.res-employer { font-weight: bold;
+				margin-right: 0.4em }
 .res-position { }
 .res-date { float: right;
 	 		clear: bottom; }
