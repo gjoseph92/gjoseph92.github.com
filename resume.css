@@ -74,7 +74,7 @@ ul.res-description { list-style: none;
 
 	.res-section {
 		margin-bottom: 0.8em !important;
-		page-break-inside: avoid;
+		/*page-break-inside: avoid;*/
 	}
 
 	#contact tel { display: inline; }

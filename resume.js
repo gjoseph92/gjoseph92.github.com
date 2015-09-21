@@ -36,10 +36,70 @@ resumeModule.controller('resume', function($scope, $location) {
 
 	$scope.experiences = [
 		{
+			place: "Denali National Park & Preserve",
+			link: "http://www.nps.gov/dena/learn/nature/soundscape.htm",
+			position: "Soundscape Technician",
+			dates: "Jun 2015 - present",
+			items: [
+				{
+					text: "Develop Python library to query & access 1TB NPS acoustic dataset",
+					filter: []
+				},
+				{
+					text: "Write code to examine and visualize trends across 10+ years of data",
+					filter: []
+				},
+				{
+					text: "Implement GIS least-cost-path analysis to optimize potential overflight routes",
+					filter: []
+				},
+				{
+					text: "Develop interactive technology for public education of sound issues",
+					filter: ["nsidc", "full"]
+				},
+				{
+					text: "Collaborate closely with regional soundscape scientist on maintenance, field logistics, and data analysis",
+					filter: []
+				},
+				{
+					text: "Independently assemble, maintain, and remove sound recording stations in remote backcountry locations",
+					filter: []
+				},
+				{
+					text: "Fix electronic & mechanical equipment failures with limited resources in the field",
+					filter: ["full"]
+				},
+				{
+					text: "Implement scripts to identify, correct, or remove faulty data",
+					filter: ["full"]
+				},
+				{
+					text: "Lead overnight backcountry field patrols to maintain equipment",
+					filter: []
+				},
+				{
+					text: "Arrange all logistics for backcountry travel, including ARCC itineraries, flight plans, and team equipment",
+					filter: ["full"]
+				},
+				{
+					text: "Serve as A-100 air crew member to access soundstations by helicopter",
+					filter: ["full"]
+				},
+				{
+					text: "Identify noise events in recorded data by spectrogram analysis",
+					filter: ["full"]
+				},
+				{
+					text: "Perform audibility analysis by labeling sound events in recorded data",
+					filter: ["full"]
+				},
+			]
+		},
+		{
 			place: "Ab Initio Software",
 			link: "http://www.abinitio.com",
-			position: "Development intern",
-			dates: "6/14 - 8/14",
+			position: "Development Intern",
+			dates: "Jun 2014 - Aug 2014",
 			items: [
 				{
 					text: "Designed algorithm to find optimal aggregation path in data cubes",
@@ -60,11 +120,11 @@ resumeModule.controller('resume', function($scope, $location) {
 			place: "Center for Engineering Education and Outreach",
 			link: "http://www.ceeo.tufts.edu",
 			position: "Research Assistant",
-			dates: "5/13 - 6/14",
+			dates: "May 2013 - Jun 2014",
 			items: [
 				{
 					text: "Consulted with education researchers to improve data collection methods",
-					filter: ["gov", "full"],
+					filter: ["full", "nsidc"],
 				},
 				{
 					text: "Designed & developed system for multiplexed speech & video recording in noisy classrooms",
@@ -85,7 +145,7 @@ resumeModule.controller('resume', function($scope, $location) {
 			place: "Center for Engineering Education and Outreach",
 			link: "http://www.ceeo.tufts.edu",
 			position: "Research Assistant",
-			dates: "5/12 - 7/12",
+			dates: "May 2012 - Aug 2012",
 			items: [
 				{
 					text: "Created data protocol between Arduinos and optical touchscreens via IR light patterns",
@@ -98,7 +158,7 @@ resumeModule.controller('resume', function($scope, $location) {
 				},
 				{
 					text: "Programmed TUIO LabVIEW library for touch interaction",
-					filter: ["gov", "full"],
+					filter: ["full"],
 				}
 			]
 		}
@@ -113,15 +173,18 @@ resumeModule.controller('resume', function($scope, $location) {
 		{text: "Algorithms", highlight: ["avatech"], filter: []},
 		{text: "Operating Systems", filter: []},
 		{text: "Machine Structure & Assembly", filter: []},
-		{text: "Computation Theory", filter: []},
+		{text: "Computation Theory", filter: ["full"]},
 		{text: "Linear Algebra", filter: []},
+		{text: "GIS", filter: []},
+		{text: "Geomorphology", filter: ["nsidc", "full"]},
+		{text: "Climate Science", filter: ["nsidc", "full"]},
+		{text: "Paleoclimatoloy", filter: ["nsidc", "full"]},
 	];
 
 	$scope.skills = {
 		"Languages": [
 			{text: "Python (+NumPy, SciPy, pandas)", highlight: ["avatech"], filter: []},
-			{text: "JavaScript", filter: []},
-			{text: "HTML5/CSS3 (+Angular, jQuery)", highlight: ["avatech"], filter: []},
+			{text: "JavaScript/HTML5/CSS3 (+Angular, Meteor, jQuery)", highlight: ["avatech"], filter: []},
 			{text: "C", filter: []},
 			{text: "C++", filter: []},
 			{text: "PHP", filter: []},
@@ -131,6 +194,7 @@ resumeModule.controller('resume', function($scope, $location) {
 			{text: "Spanish", filter: []},
 		],
 		"Software": [
+			{text: "ArcGIS", filter: []},
 			{text: "Photoshop", filter: []},
 			{text: "Illustrator", filter: []},
 			{text: "AfterEffects", filter: []},
@@ -149,13 +213,17 @@ resumeModule.controller('resume', function($scope, $location) {
 			dates: "2013 - 2015",
 			items: [
 				{
-					text: "Create quick-turnaround web services to help club functions",
+					text: "Created quick-turnaround web services to help club functions",
 					filter: [],
 					highlight: []
 				},
 				{
-					text: "Integrate new systems with old code base and design",
+					text: "Integrated new systems with old code base and design",
 					filter: []
+				},
+				{
+					text: "Developed vehicle reservation, online shopping, trip-posting, and reimbursement-processing systems",
+					filter: ["full"]
 				}
 			]
 		},
@@ -166,25 +234,25 @@ resumeModule.controller('resume', function($scope, $location) {
 			dates: "2014",
 			items: [
 				{
-					text: "Oversee operations of 700-member outdoor club with lodge and vehicles",
+					text: "Oversaw operations of 700-member outdoor club with lodge and vehicles",
 					filter: [],
 					highlight: []
 				},
 				{
-					text: "Supervise executive board and delegate responsibilities",
+					text: "Supervised executive board and delegated responsibilities",
 					filter: []
 				},
 				{
-					text: "Collaborate with university administrators to improve club function",
+					text: "Collaborated with university administrators to improve club function",
 					filter: []
 				},
 				{
-					text: "Develop and lead long-term technical and safety curriculum",
+					text: "Developed and led long-term technical and safety curriculum",
 					filter: []
 				},
 				{
-					text: "Budget income between programs, equipment, facilities, and long-term projects",
-					filter: ["gov", "full"]
+					text: "Budgeted income between programs, equipment, facilities, and long-term projects",
+					filter: ["full"]
 				}
 			]
 		},
