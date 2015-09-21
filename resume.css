@@ -1,9 +1,16 @@
-div#contact { float: left;
-	 		  width: 260px; 
-			  border: 15px; }
-div#resume { float: left;
-			 position: relative;
-			 width: 70%; }
+body {
+	display: -webkit-flex;
+	display: flex;
+}
+
+div#contact { width: 260px;
+			  margin-right: 20px; }
+div#resume { max-width: 900px; }
+
+@media (max-width: 900px) {
+	body { flex-wrap: wrap;
+		   -webkit-flex-wrap: wrap; }
+}
 			
 h3.res-heading { margin: 0em;
 				 margin-top: 0.2em;
@@ -16,12 +23,17 @@ ul.res-section { list-style: none;
 				 padding: 0;}
 
 .res-section-heading {
+	display: -webkit-flex;
 	display: flex;
+	-webkit-flex-wrap: wrap;
 	flex-wrap: wrap;
 }
 .res-pos-date {
+	-webkit-flex-grow: 1;
 	flex-grow: 1;
+	display: -webkit-flex;
 	display: flex;
+	-webkit-justify-content: space-between;
 	justify-content: space-between;
 }
 				
