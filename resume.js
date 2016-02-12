@@ -3,6 +3,13 @@ resumeModule = angular.module("resume", []);
 resumeModule.filter("shouldShow", function() {
 	return function(items, filter) {
 		return items.filter(function(item) {
+			if (filter != null && 'exclude' in item) {
+				var itemExclude = item.exclude;
+				if (angular.isArray(itemExclude)) {
+					if (itemExclude.indexOf(filter) != -1) return false;
+				}
+			}
+
 			if ('filter' in item) {
 				var itemFilter = item.filter;
 				if (angular.isArray(itemFilter) && itemFilter.length == 0) return true;
@@ -178,7 +185,7 @@ resumeModule.controller('resume', function($scope, $location) {
 		{text: "GIS", filter: []},
 		{text: "Geomorphology", filter: ["nsidc", "full"]},
 		{text: "Climate Science", filter: ["nsidc", "full"]},
-		{text: "Paleoclimatoloy", filter: ["nsidc", "full"]},
+		{text: "Paleoclimatology", filter: ["nsidc", "full"]},
 	];
 
 	$scope.skills = {
