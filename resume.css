@@ -54,11 +54,11 @@ ul.res-description { list-style: none;
 
 #contact tel { display: none; }
 
-.highlight { background-color: #fbe772;
+.highlight { background-color: rgba(251, 231, 114, 0.73);
 		   border: 0.5px solid #ceb107;
 		   border-radius: 3px;
 		   transition: background-color 0.05s; }
-.highlight:hover { background-color: rgb(255, 204, 0); }
+.highlight:hover { background-color: rgba(255, 204, 0, 0.67); }
 
 @media print {
 	body {

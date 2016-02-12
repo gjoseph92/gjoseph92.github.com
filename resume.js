@@ -50,7 +50,8 @@ resumeModule.controller('resume', function($scope, $location) {
 			items: [
 				{
 					text: "Lead or assist with fieldwork installing sound monitoring equipment in National Parks around the country",
-					filter: []
+					filter: [],
+					highlight: ["elias"]
 				},
 				{
 					text: "Develop and document open-source Python library for querying data and metadata contained in hierarchical file systems",
@@ -75,7 +76,8 @@ resumeModule.controller('resume', function($scope, $location) {
 			items: [
 				{
 					text: "Independently assembled, maintained, and removed sound recording stations in remote backcountry locations",
-					filter: []
+					filter: [],
+					highlight: ["elias"]
 				},
 				{
 					text: "Developed Python library to query & access 1TB NPS acoustic dataset",
@@ -110,15 +112,18 @@ resumeModule.controller('resume', function($scope, $location) {
 				},
 				{
 					text: "Led overnight backcountry field patrols with other researchers to maintain equipment",
-					filter: []
+					filter: [],
+					highlight: ["elias"]
 				},
 				{
 					text: "Arranged all logistics for backcountry travel, including ARCC itineraries, flight plans, and team equipment",
-					filter: ["outdoor", "full"]
+					filter: ["outdoor", "full"],
+					highlight: ["elias"]
 				},
 				{
 					text: "Managed risks from wildlife, rivers, climate, and group decision-making while traveling in trail-less wilderness",
-					filter: ["outdoor", "full"]
+					filter: ["outdoor", "full"],
+					highlight: ["elias"]
 				},
 				{
 					text: "Navigated through arboreal and fluvial obstacles to remote soundstations by topographic map, compass, and GPS",
@@ -240,11 +245,11 @@ resumeModule.controller('resume', function($scope, $location) {
 		{text: "Linear Algebra", filter: [], exclude: ["outdoor"]},
 		{text: "GIS", filter: []},
 		{text: "Geomorphology", filter: ["outdoor", "nsidc", "full"]},
-		{text: "Climate Science", filter: ["outdoor", "nsidc", "full"]},
+		{text: "Climate Science", filter: ["outdoor", "nsidc", "full"], highlight: ["elias"]},
 		{text: "Paleoclimatology", filter: ["outdoor", "nsidc", "full"]},
 
-		{text: "Wilderness First Aid (4/2012 & 4/2014)", filter: ["outdoor", "full"]},
-		{text: "CPR & AED (4/2012 & 4/2014)", filter: ["outdoor", "full"]},
+		{text: "Wilderness First Aid (4/2012 & 4/2014)", filter: ["outdoor", "full"], highlight: ["elias"]},
+		{text: "CPR & AED (4/2012 & 4/2014)", filter: ["outdoor", "full"], highlight: ["elias"]},
 		{text: "A-100 basic aviation safety (6/2015)", filter: ["outdoor", "full"]},
 		{text: "ASI ATV RiderCourse (6/2015)", filter: ["outdoor", "full"]},
 		{text: "Swiftwater Rescue (9/2012)", filter: ["outdoor", "full"]},
@@ -311,12 +316,16 @@ resumeModule.controller('resume', function($scope, $location) {
 				{
 					text: "Led outdoor instructional trips in ice climbing, single- and multi-pitch rock climbing, whitewater kayaking, backpacking, and hiking",
 					filter: ["outdoor"],
-					highlight: []
+					highlight: ["elias"]
 				},
 				{
 					text: "Wrote emergency response protocols used by trip leaders and lodge caretakers",
 					filter: ["outdoor"],
-					highlight: []
+					highlight: ["elias"]
+				},
+				{
+					text: "Organized and taught seminars on outdoor skills, including rock climbing anchor building, rappelling safety, single-pitch climbing group and site management, lead climbing & belaying, ice climbing technique, rigging and pulley systems, map & compass navigation, winter hiking safety, basic whitewater kayak strokes & wet exiting, and rolling technique",
+					filter: ["outdoor"]
 				},
 				{
 					text: "Supervised 17-member executive board and delegated responsibilities",
@@ -362,7 +371,8 @@ resumeModule.controller('resume', function($scope, $location) {
 				},
 				{
 					text: "Presented safety talks on proper ice climbing equipment use, belaying, site safety, and basic ice climbing technique",
-					filter: []
+					filter: [],
+					highlight: ["elias"]
 				},
 				{
 					text: "Designed inventory system allowing return of gear from dozens of sponsors to original owners with zero losses",
@@ -370,7 +380,8 @@ resumeModule.controller('resume', function($scope, $location) {
 				},
 				{
 					text: "Assisted participants with fitting mountaineering boots and crampons",
-					filter: []
+					filter: [],
+					highlight: ["elias"]
 				},
 				{
 					text: "Flexibly responded to complications in hectic and time-pressured environment",
