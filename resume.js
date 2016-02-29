@@ -58,7 +58,7 @@ resumeModule.controller('resume', function($scope, $location) {
 					filter: []
 				},
 				{
-					text: "Consult with scientists to design software tool addressing overall needs of several distinct projects",
+					text: "Consult with scientists to design unified software tool addressing needs of several distinct projects",
 					filter: []
 				},
 				{
@@ -100,7 +100,7 @@ resumeModule.controller('resume', function($scope, $location) {
 				{
 					text: "Collaborated closely with regional soundscape scientist on maintenance, field logistics, and data analysis",
 					filter: [],
-					exclude: ["outdoor"]
+					exclude: ["mica", "outdoor"]
 				},
 				{
 					text: "Fixed electronic & mechanical equipment failures with limited resources in the field",
@@ -117,12 +117,12 @@ resumeModule.controller('resume', function($scope, $location) {
 				},
 				{
 					text: "Arranged all logistics for backcountry travel, including ARCC itineraries, flight plans, and team equipment",
-					filter: ["outdoor", "full"],
+					filter: ["outdoor", "mica", "full"],
 					highlight: ["elias"]
 				},
 				{
 					text: "Managed risks from wildlife, rivers, climate, and group decision-making while traveling in trail-less wilderness",
-					filter: ["outdoor", "full"],
+					filter: ["outdoor", "mica", "full"],
 					highlight: ["elias"]
 				},
 				{
@@ -244,15 +244,15 @@ resumeModule.controller('resume', function($scope, $location) {
 		{text: "Computation Theory", filter: ["full"], exclude: ["outdoor"]},
 		{text: "Linear Algebra", filter: [], exclude: ["outdoor"]},
 		{text: "GIS", filter: []},
-		{text: "Geomorphology", filter: ["outdoor", "nsidc", "full"]},
-		{text: "Climate Science", filter: ["outdoor", "nsidc", "full"], highlight: ["elias"]},
-		{text: "Paleoclimatology", filter: ["outdoor", "nsidc", "full"]},
+		{text: "Geomorphology", filter: ["outdoor", "mica", "nsidc", "full"]},
+		{text: "Climate Science", filter: ["outdoor", "mica", "nsidc", "full"], highlight: ["elias"]},
+		{text: "Paleoclimatology", filter: ["outdoor", "mica", "nsidc", "full"]},
 
-		{text: "Wilderness First Aid (4/2012 & 4/2014)", filter: ["outdoor", "full"], highlight: ["elias"]},
-		{text: "CPR & AED (4/2012 & 4/2014)", filter: ["outdoor", "full"], highlight: ["elias"]},
-		{text: "A-100 basic aviation safety (6/2015)", filter: ["outdoor", "full"]},
-		{text: "ASI ATV RiderCourse (6/2015)", filter: ["outdoor", "full"]},
-		{text: "Swiftwater Rescue (9/2012)", filter: ["outdoor", "full"]},
+		{text: "Wilderness First Aid (4/2012 & 4/2014)", filter: ["outdoor", "mica", "full"], highlight: ["elias"]},
+		{text: "CPR & AED (4/2012 & 4/2014)", filter: ["outdoor", "mica", "full"], highlight: ["elias"]},
+		{text: "A-100 basic aviation safety (6/2015)", filter: ["outdoor", "mica", "full"]},
+		{text: "ASI ATV RiderCourse (6/2015)", filter: ["outdoor", "mica", "full"]},
+		{text: "Swiftwater Rescue (9/2012)", filter: ["outdoor", "mica", "full"]},
 	];
 
 	$scope.skills = {
@@ -315,12 +315,12 @@ resumeModule.controller('resume', function($scope, $location) {
 				},
 				{
 					text: "Led outdoor instructional trips in ice climbing, single- and multi-pitch rock climbing, whitewater kayaking, backpacking, and hiking",
-					filter: ["outdoor"],
+					filter: ["outdoor", "mica"],
 					highlight: ["elias"]
 				},
 				{
 					text: "Wrote emergency response protocols used by trip leaders and lodge caretakers",
-					filter: ["outdoor"],
+					filter: ["outdoor", "mica"],
 					highlight: ["elias"]
 				},
 				{
@@ -342,7 +342,7 @@ resumeModule.controller('resume', function($scope, $location) {
 				},
 				{
 					text: "Managed response to outdoor emergencies on club trips in collaboration with emergency personnel and university Public Safety administrators",
-					filter: ["outdoor"],
+					filter: ["outdoor", "mica"],
 					highlight: []
 				},
 				{
@@ -363,7 +363,7 @@ resumeModule.controller('resume', function($scope, $location) {
 			link: "https://viceaxe.com/events/vice-fest/",
 			position: "Equipment Coordinator",
 			dates: "2013 - 2015",
-			filter: ["outdoor", "full"],
+			filter: ["outdoor", "mica", "full"],
 			items: [
 				{
 					text: "Supervised 5-person team in distributing and collecting hundreds of pieces of gear for ice climbing festival",
@@ -376,7 +376,7 @@ resumeModule.controller('resume', function($scope, $location) {
 				},
 				{
 					text: "Designed inventory system allowing return of gear from dozens of sponsors to original owners with zero losses",
-					filter: ["full"]
+					filter: ["mica", "full"]
 				},
 				{
 					text: "Assisted participants with fitting mountaineering boots and crampons",
