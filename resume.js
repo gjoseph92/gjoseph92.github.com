@@ -43,26 +43,62 @@ resumeModule.controller('resume', function($scope, $location) {
 
 	$scope.experiences = [
 		{
+			place: "St. Elias Alpine Guides",
+			link: "http://www.steliasguides.com/",
+			position: "Lead Ice Climbing Guide",
+			dates: "Jun 2016 - Sept 2016",
+			items: [
+				{
+					text: "Led ice climbing & glacier hiking trips in Wrangell-St. Elias National Park, Alaska",
+					filter: []
+				},
+				{
+					text: "Constructed ice anchors & rope systems for bottom- and top-managed climbing sites, including rescue systems",
+					filter: ["outdoor"]
+				},
+				{
+					text: "Managed group safety in remote wilderness settings and administered first aid as needed",
+					filter: []
+				},
+				{
+					text: "Presented interpretation of natural and cultural history on 2-hour mine town tours",
+					filter: []
+				},
+				{
+					text: "Operated information center to provide orientation to visitors",
+					filter: []
+				},
+				{
+					text: "Transported clients safely in 15-passenger vans on unimproved roads",
+					filter: ["full"]
+				},
+				{
+					text: "Burned trash, when necessary",
+					filter: []
+				}
+			]
+		},
+		{
 			place: "National Park Service, Natural Sounds & Night Skies Division",
 			link: "http://www.nps.gov/orgs/1050/index.htm",
 			position: "Data Scientist",
-			dates: "Nov 2015 - present",
+			dates: "Nov 2015 - May 2016",
 			items: [
 				{
-					text: "Lead or assist with fieldwork installing sound monitoring equipment in National Parks around the country",
+					text: "Led or assisted with fieldwork installing sound monitoring equipment in National Parks around the country",
 					filter: [],
 					highlight: ["elias"]
 				},
 				{
-					text: "Develop and document open-source Python library for querying data and metadata contained in hierarchical file systems",
+					text: "Developed and documented open-source Python library for querying data and metadata contained in hierarchical file systems",
 					filter: []
 				},
 				{
-					text: "Consult with scientists to design unified software tool addressing needs of several distinct projects",
+					text: "Consulted with scientists to design unified software tool addressing needs of several distinct projects",
 					filter: []
 				},
 				{
-					text: "Program Python library to efficiently query & access 200TB acoustic dataset",
+					text: "Programmed Python library to efficiently query & access 200TB acoustic dataset",
 					filter: [],
 					exclude: ["outdoor"]
 				}
@@ -100,7 +136,7 @@ resumeModule.controller('resume', function($scope, $location) {
 				{
 					text: "Collaborated closely with regional soundscape scientist on maintenance, field logistics, and data analysis",
 					filter: [],
-					exclude: ["mica", "outdoor"]
+					exclude: ["outdoor"]
 				},
 				{
 					text: "Fixed electronic & mechanical equipment failures with limited resources in the field",
@@ -117,12 +153,12 @@ resumeModule.controller('resume', function($scope, $location) {
 				},
 				{
 					text: "Arranged all logistics for backcountry travel, including ARCC itineraries, flight plans, and team equipment",
-					filter: ["outdoor", "mica", "full"],
+					filter: ["outdoor", "full"],
 					highlight: ["elias"]
 				},
 				{
 					text: "Managed risks from wildlife, rivers, climate, and group decision-making while traveling in trail-less wilderness",
-					filter: ["outdoor", "mica", "full"],
+					filter: ["outdoor", "full"],
 					highlight: ["elias"]
 				},
 				{
@@ -244,15 +280,16 @@ resumeModule.controller('resume', function($scope, $location) {
 		{text: "Computation Theory", filter: ["full"], exclude: ["outdoor"]},
 		{text: "Linear Algebra", filter: [], exclude: ["outdoor"]},
 		{text: "GIS", filter: []},
-		{text: "Geomorphology", filter: ["outdoor", "mica", "nsidc", "full"]},
-		{text: "Climate Science", filter: ["outdoor", "mica", "nsidc", "full"], highlight: ["elias"]},
-		{text: "Paleoclimatology", filter: ["outdoor", "mica", "nsidc", "full"]},
+		{text: "Geomorphology", filter: ["outdoor", "nsidc", "full"]},
+		{text: "Climate Science", filter: ["outdoor", "nsidc", "full"], highlight: ["elias"]},
+		{text: "Paleoclimatology", filter: ["outdoor", "nsidc", "full"]},
 
-		{text: "Wilderness First Aid (4/2012 & 4/2014)", filter: ["outdoor", "mica", "full"], highlight: ["elias"]},
-		{text: "CPR & AED (4/2012 & 4/2014)", filter: ["outdoor", "mica", "full"], highlight: ["elias"]},
-		{text: "A-100 basic aviation safety (6/2015)", filter: ["outdoor", "mica", "full"]},
-		{text: "ASI ATV RiderCourse (6/2015)", filter: ["outdoor", "mica", "full"]},
-		{text: "Swiftwater Rescue (9/2012)", filter: ["outdoor", "mica", "full"]},
+		{text: "Wilderness First Responder (4/2016)", filter: ["outdoor", "full"], highlight: ["elias"]},
+		{text: "CPR & AED (4/2016)", filter: ["outdoor", "full"], highlight: ["elias"]},
+		{text: "Wilderness First Aid (4/2012 & 4/2014)", filter: ["full"]},
+		{text: "A-100 basic aviation safety (6/2015)", filter: ["outdoor", "full"]},
+		{text: "ASI ATV RiderCourse (6/2015)", filter: ["outdoor", "full"]},
+		{text: "Swiftwater Rescue (9/2012)", filter: ["outdoor", "full"]},
 	];
 
 	$scope.skills = {
@@ -282,7 +319,7 @@ resumeModule.controller('resume', function($scope, $location) {
 	$scope.leadership = [
 		{
 			place: "Tufts Mountain Club",
-			link: "http://www.tuftsmountainclub.org/trips",
+			link: "http://www.tuftsmountainclub.org/activities",
 			position: "Web developer",
 			dates: "2013 - 2015",
 			exclude: ["outdoor"],
@@ -304,7 +341,7 @@ resumeModule.controller('resume', function($scope, $location) {
 		},
 		{
 			place: "Tufts Mountain Club",
-			link: "http://www.tuftsmountainclub.org/trips",
+			link: "http://www.tuftsmountainclub.org/activities",
 			position: "President",
 			dates: "2014",
 			items: [
@@ -315,12 +352,12 @@ resumeModule.controller('resume', function($scope, $location) {
 				},
 				{
 					text: "Led outdoor instructional trips in ice climbing, single- and multi-pitch rock climbing, whitewater kayaking, backpacking, and hiking",
-					filter: ["outdoor", "mica"],
+					filter: ["outdoor"],
 					highlight: ["elias"]
 				},
 				{
 					text: "Wrote emergency response protocols used by trip leaders and lodge caretakers",
-					filter: ["outdoor", "mica"],
+					filter: ["outdoor"],
 					highlight: ["elias"]
 				},
 				{
@@ -342,7 +379,7 @@ resumeModule.controller('resume', function($scope, $location) {
 				},
 				{
 					text: "Managed response to outdoor emergencies on club trips in collaboration with emergency personnel and university Public Safety administrators",
-					filter: ["outdoor", "mica"],
+					filter: ["outdoor"],
 					highlight: []
 				},
 				{
@@ -353,7 +390,7 @@ resumeModule.controller('resume', function($scope, $location) {
 		},
 		{
 			place: "Tufts Mountain Club",
-			link: "http://www.tuftsmountainclub.org/trips",
+			link: "http://www.tuftsmountainclub.org/activities",
 			position: "Technical Skills & Safety director",
 			dates: "2011 - 2013",
 			filter: ["full"]
@@ -363,7 +400,7 @@ resumeModule.controller('resume', function($scope, $location) {
 			link: "https://viceaxe.com/events/vice-fest/",
 			position: "Equipment Coordinator",
 			dates: "2013 - 2015",
-			filter: ["outdoor", "mica", "full"],
+			filter: ["outdoor", "full"],
 			items: [
 				{
 					text: "Supervised 5-person team in distributing and collecting hundreds of pieces of gear for ice climbing festival",
@@ -376,7 +413,7 @@ resumeModule.controller('resume', function($scope, $location) {
 				},
 				{
 					text: "Designed inventory system allowing return of gear from dozens of sponsors to original owners with zero losses",
-					filter: ["mica", "full"]
+					filter: ["full"]
 				},
 				{
 					text: "Assisted participants with fitting mountaineering boots and crampons",
