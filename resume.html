@@ -38,7 +38,7 @@
 			<li ng-repeat="experience in experiences | shouldShow:filter">
 				<div class="res-section-heading">
 					<span class="res-employer">
-						<a class="subtle" ng-href="{{experience.link}}">{{experience.place}}</a>, </span>
+						<a class="subtle" target="_blank" ng-href="{{experience.link}}">{{experience.place}}</a>, </span>
 					<span class="res-pos-date">
 						<span class="res-position">{{experience.position}}</span>
 						<span class="res-date">{{experience.dates}}</span>
@@ -66,7 +66,7 @@
 		<ul class="res-section">
 			<li ng-repeat="experience in leadership  | shouldShow:filter">
 				<span class="res-employer">
-					<a class="subtle" ng-href="{{experience.link}}">{{experience.place}}</a>,</span>
+					<a class="subtle" target="_blank" ng-href="{{experience.link}}">{{experience.place}}</a>,</span>
 				<span class="res-position">{{experience.position}}</span>
 				<span class="res-date">{{experience.dates}}</span>
 
