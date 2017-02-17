@@ -43,6 +43,68 @@ resumeModule.controller('resume', function($scope, $location) {
 
 	$scope.experiences = [
 		{
+			place: "Park City Mountain Resort",
+			link: "http://www.parkcitymountain.com/",
+			position: "Ski Patroller",
+			dates: "Dec 2016 - Apr 2017",
+			items: [
+				{
+					text: "Provide on-mountain emergency medical care to inured guests",
+					filter: []
+				},
+				{
+					text: "Safely ski injured guests in toboggans through all terrain",
+					filter: []
+				},
+				{
+					text: "Assist in avalanche control work using explosives and ski cuts",
+					filter: []
+				},
+				// {
+				// 	text: 'Flip orange signs between "open" and "closed", repeatedly',
+				// 	filter: []
+				// },
+				{
+					text: "Ski while carrying large boxes, foam pads, stacks of toilet paper, etc. obscuring face",
+					filter: []
+				},
+				// {
+				// 	text: "Shred gnar, with professionalism",
+				// 	filter: []
+				// }
+			]
+		},
+		{
+			place: "National Park Service, Natural Sounds & Night Skies Division",
+			link: "http://www.nps.gov/orgs/1050/index.htm",
+			position: "Software Engineer",
+			dates: "Nov 2015 - May 2016",
+			items: [
+				{
+					text: "Developed and documented open-source Python library for querying data & metadata contained in hierarchical file systems",
+					filter: []
+				},
+				{
+					text: "Wrote Python library to efficiently sub-select, parse, & process 200TB acoustic dataset",
+					filter: []
+				},
+				{
+					text: "Advocated for open-source release of government-developed code in the National Park Service",
+					exclude: ["outdoor"]
+				},
+				{
+					text: "Led or assisted with fieldwork installing sound monitoring equipment in National Parks",
+					filter: [],
+					highlight: ["elias"]
+				},
+				{
+					text: "Consulted with scientists to design unified software tool addressing needs of several distinct projects",
+					filter: [],
+					exclude: ["outdoor"]
+				}
+			]
+		},
+		{
 			place: "St. Elias Alpine Guides",
 			link: "http://www.steliasguides.com/",
 			position: "Lead Ice Climbing Guide",
@@ -66,41 +128,15 @@ resumeModule.controller('resume', function($scope, $location) {
 				},
 				{
 					text: "Operated information center to provide orientation to visitors",
-					filter: []
+					filter: ["outdoor", "full"]
 				},
 				{
 					text: "Transported clients safely in 15-passenger vans on unimproved roads",
-					filter: ["full"]
+					filter: ["outdoor", "full"]
 				},
 				{
 					text: "Burned trash, when necessary",
 					filter: []
-				}
-			]
-		},
-		{
-			place: "National Park Service, Natural Sounds & Night Skies Division",
-			link: "http://www.nps.gov/orgs/1050/index.htm",
-			position: "Data Scientist",
-			dates: "Nov 2015 - May 2016",
-			items: [
-				{
-					text: "Led or assisted with fieldwork installing sound monitoring equipment in National Parks around the country",
-					filter: [],
-					highlight: ["elias"]
-				},
-				{
-					text: "Developed and documented open-source Python library for querying data and metadata contained in hierarchical file systems",
-					filter: []
-				},
-				{
-					text: "Consulted with scientists to design unified software tool addressing needs of several distinct projects",
-					filter: []
-				},
-				{
-					text: "Programmed Python library to efficiently query & access 200TB acoustic dataset",
-					filter: [],
-					exclude: ["outdoor"]
 				}
 			]
 		},
@@ -116,7 +152,7 @@ resumeModule.controller('resume', function($scope, $location) {
 					highlight: ["elias"]
 				},
 				{
-					text: "Developed Python library to query & access 1TB NPS acoustic dataset",
+					text: "Developed Python library to query & access 1TB acoustic dataset",
 					filter: [],
 					exclude: ["outdoor"]
 				},
@@ -130,12 +166,12 @@ resumeModule.controller('resume', function($scope, $location) {
 				},
 				{
 					text: "Developed interactive technology for public education of sound issues",
-					filter: ["nsidc", "full"],
+					filter: ["axiom", "nsidc", "full"],
 					exclude: ["outdoor"]
 				},
 				{
 					text: "Collaborated closely with regional soundscape scientist on maintenance, field logistics, and data analysis",
-					filter: [],
+					filter: ["full"],
 					exclude: ["outdoor"]
 				},
 				{
@@ -147,7 +183,7 @@ resumeModule.controller('resume', function($scope, $location) {
 					filter: ["full"]
 				},
 				{
-					text: "Led overnight backcountry field patrols with other researchers to maintain equipment",
+					text: "Led overnight backcountry fieldwork with other researchers to maintain equipment",
 					filter: [],
 					highlight: ["elias"]
 				},
@@ -215,6 +251,10 @@ resumeModule.controller('resume', function($scope, $location) {
 					text: "Wrote test code & integrated with production codebase",
 					filter: []
 				},
+				{
+					text: "Supplied roommates with 1-2 yogurt cups per day from employee snackroom",
+					filter: []
+				}
 			]
 		},
 		{
@@ -226,7 +266,7 @@ resumeModule.controller('resume', function($scope, $location) {
 			items: [
 				{
 					text: "Consulted with education researchers to improve data collection methods",
-					filter: ["full", "nsidc"],
+					filter: ["full", "nsidc", "axiom"],
 				},
 				{
 					text: "Designed & developed system for multiplexed speech & video recording in noisy classrooms",
@@ -261,7 +301,7 @@ resumeModule.controller('resume', function($scope, $location) {
 				},
 				{
 					text: "Programmed TUIO LabVIEW library for touch interaction",
-					filter: ["full"],
+					filter: ["full", "axiom"],
 				}
 			]
 		}
@@ -280,11 +320,12 @@ resumeModule.controller('resume', function($scope, $location) {
 		{text: "Computation Theory", filter: ["full"], exclude: ["outdoor"]},
 		{text: "Linear Algebra", filter: [], exclude: ["outdoor"]},
 		{text: "GIS", filter: []},
-		{text: "Geomorphology", filter: ["outdoor", "nsidc", "full"]},
-		{text: "Climate Science", filter: ["outdoor", "nsidc", "full"], highlight: ["elias"]},
-		{text: "Paleoclimatology", filter: ["outdoor", "nsidc", "full"]},
+		{text: "Geomorphology", filter: ["outdoor", "axiom", "nsidc", "full"]},
+		{text: "Climate Science", filter: ["outdoor", "axiom", "nsidc", "full"], highlight: ["elias"]},
+		{text: "Paleoclimatology", filter: ["outdoor", "axiom", "nsidc", "full"]},
 
-		{text: "Wilderness First Responder (4/2016)", filter: ["outdoor", "full"], highlight: ["elias"]},
+		{text: "Wilderness First Responder (4/2016)", filter: ["outdoor", "axiom", "full"], highlight: ["elias"]},
+		{text: "AAI Level 1 Avalanche Fundamentals (12/2016)", filter: ["outdoor", "full"]},
 		{text: "CPR & AED (4/2016)", filter: ["outdoor", "full"], highlight: ["elias"]},
 		{text: "Wilderness First Aid (4/2012 & 4/2014)", filter: ["full"]},
 		{text: "A-100 basic aviation safety (6/2015)", filter: ["outdoor", "full"]},
@@ -294,8 +335,9 @@ resumeModule.controller('resume', function($scope, $location) {
 
 	$scope.skills = {
 		"Languages": [
-			{text: "Python (+NumPy, SciPy, pandas)", highlight: ["avatech"], filter: []},
-			{text: "JavaScript/HTML5/CSS3 (+Angular, Meteor, jQuery)", highlight: ["avatech"], filter: []},
+			{text: "Python (+NumPy, pandas, matplotlib)", highlight: ["avatech"], filter: []},
+			{text: "JavaScript/HTML/CSS", highlight: ["avatech"], filter: []},
+			{text: "Shell scripting (bash)", filter: []},
 			{text: "C", filter: []},
 			{text: "C++", filter: []},
 			{text: "PHP", filter: []},
