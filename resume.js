@@ -60,10 +60,6 @@ resumeModule.controller('resume', function($scope, $location) {
 					text: "Assist in avalanche control work using explosives and ski cuts",
 					filter: []
 				},
-				// {
-				// 	text: 'Flip orange signs between "open" and "closed", repeatedly',
-				// 	filter: []
-				// },
 				{
 					text: "Ski while carrying large boxes, foam pads, stacks of toilet paper, etc. obscuring face",
 					filter: []
@@ -100,7 +96,7 @@ resumeModule.controller('resume', function($scope, $location) {
 				{
 					text: "Consulted with scientists to design unified software tool addressing needs of several distinct projects",
 					filter: [],
-					exclude: ["outdoor"]
+					exclude: ["outdoor", "aaa"]
 				}
 			]
 		},
@@ -116,7 +112,7 @@ resumeModule.controller('resume', function($scope, $location) {
 				},
 				{
 					text: "Constructed ice anchors & rope systems for bottom- and top-managed climbing sites, including rescue systems",
-					filter: ["outdoor"]
+					filter: ["outdoor", "aaa"]
 				},
 				{
 					text: "Managed group safety in remote wilderness settings and administered first aid as needed",
@@ -128,11 +124,11 @@ resumeModule.controller('resume', function($scope, $location) {
 				},
 				{
 					text: "Operated information center to provide orientation to visitors",
-					filter: ["outdoor", "full"]
+					filter: ["outdoor", "aaa", "full"]
 				},
 				{
 					text: "Transported clients safely in 15-passenger vans on unimproved roads",
-					filter: ["outdoor", "full"]
+					filter: ["outdoor", "aaa", "full"]
 				},
 				{
 					text: "Burned trash, when necessary",
@@ -154,7 +150,7 @@ resumeModule.controller('resume', function($scope, $location) {
 				{
 					text: "Developed Python library to query & access 1TB acoustic dataset",
 					filter: [],
-					exclude: ["outdoor"]
+					exclude: ["outdoor", "aaa"]
 				},
 				{
 					text: "Wrote code to examine and visualize trends across 10+ years of acoustic data",
@@ -167,12 +163,12 @@ resumeModule.controller('resume', function($scope, $location) {
 				{
 					text: "Developed interactive technology for public education of sound issues",
 					filter: ["axiom", "nsidc", "full"],
-					exclude: ["outdoor"]
+					exclude: ["outdoor", "aaa"]
 				},
 				{
 					text: "Collaborated closely with regional soundscape scientist on maintenance, field logistics, and data analysis",
 					filter: ["full"],
-					exclude: ["outdoor"]
+					exclude: ["outdoor", "aaa"]
 				},
 				{
 					text: "Fixed electronic & mechanical equipment failures with limited resources in the field",
@@ -189,17 +185,17 @@ resumeModule.controller('resume', function($scope, $location) {
 				},
 				{
 					text: "Arranged all logistics for backcountry travel, including ARCC itineraries, flight plans, and team equipment",
-					filter: ["outdoor", "full"],
+					filter: ["outdoor", "aaa", "full"],
 					highlight: ["elias"]
 				},
 				{
 					text: "Managed risks from wildlife, rivers, climate, and group decision-making while traveling in trail-less wilderness",
-					filter: ["outdoor", "full"],
+					filter: ["outdoor", "aaa", "full"],
 					highlight: ["elias"]
 				},
 				{
 					text: "Navigated through arboreal and fluvial obstacles to remote soundstations by topographic map, compass, and GPS",
-					filter: ["outdoor", "full"]
+					filter: ["outdoor", "aaa", "full"]
 				},
 				{
 					text: "Operated government vehicles on unimproved roads while following park-specific road rules",
@@ -211,7 +207,7 @@ resumeModule.controller('resume', function($scope, $location) {
 				},
 				{
 					text: "Served as A-100 air crew member to access soundstations by helicopter",
-					filter: ["outdoor", "full"]
+					filter: ["outdoor", "aaa", "full"]
 				},
 				{
 					text: "Completed ASI ATV RiderCourse and operated ATVs to access soundstations",
@@ -262,7 +258,7 @@ resumeModule.controller('resume', function($scope, $location) {
 			link: "http://www.ceeo.tufts.edu",
 			position: "Research Assistant",
 			dates: "May 2013 - Jun 2014",
-			exclude: ["outdoor"],
+			exclude: ["outdoor", "aaa"],
 			items: [
 				{
 					text: "Consulted with education researchers to improve data collection methods",
@@ -288,7 +284,7 @@ resumeModule.controller('resume', function($scope, $location) {
 			link: "http://www.ceeo.tufts.edu",
 			position: "Research Assistant",
 			dates: "May 2012 - Aug 2012",
-			exclude: ["outdoor"],
+			exclude: ["outdoor", "aaa"],
 			items: [
 				{
 					text: "Created data protocol between Arduinos and optical touchscreens via IR light patterns",
@@ -308,29 +304,29 @@ resumeModule.controller('resume', function($scope, $location) {
 	];
 
 	$scope.courses = [
-		{text: "Distributed Systems", highlight: ["avatech"], filter: [], exclude: ["outdoor"]},
-		{text: "Machine Learning", highlight: ["avatech"], filter: [], exclude: ["outdoor"]},
-		{text: "Visual Analytics", highlight: ["avatech"], filter: [], exclude: ["outdoor"]},
-		{text: "Visualization", highlight: ["avatech"], filter: ["full"], exclude: ["outdoor"]},
-		{text: "Web Programming", highlight: ["avatech"], filter: [], exclude: ["outdoor"]},
-		{text: "Computer Vision", highlight: ["avatech"], filter: [], exclude: ["outdoor"]},
-		{text: "Algorithms", highlight: ["avatech"], filter: [], exclude: ["outdoor"]},
-		{text: "Operating Systems", filter: [], exclude: ["outdoor"]},
-		{text: "Machine Structure & Assembly", filter: [], exclude: ["outdoor"]},
-		{text: "Computation Theory", filter: ["full"], exclude: ["outdoor"]},
-		{text: "Linear Algebra", filter: [], exclude: ["outdoor"]},
+		{text: "Distributed Systems", highlight: ["avatech"], filter: [], exclude: ["outdoor", "aaa"]},
+		{text: "Machine Learning", highlight: ["avatech"], filter: [], exclude: ["outdoor", "aaa"]},
+		{text: "Visual Analytics", highlight: ["avatech"], filter: [], exclude: ["outdoor", "aaa"]},
+		{text: "Visualization", highlight: ["avatech"], filter: ["full"], exclude: ["outdoor", "aaa"]},
+		{text: "Web Programming", highlight: ["avatech"], filter: [], exclude: ["outdoor", "aaa"]},
+		{text: "Computer Vision", highlight: ["avatech"], filter: [], exclude: ["outdoor", "aaa"]},
+		{text: "Algorithms", highlight: ["avatech"], filter: [], exclude: ["outdoor", "aaa"]},
+		{text: "Operating Systems", filter: [], exclude: ["outdoor", "aaa"]},
+		{text: "Machine Structure & Assembly", filter: [], exclude: ["outdoor", "aaa"]},
+		{text: "Computation Theory", filter: ["full"], exclude: ["outdoor", "aaa"]},
+		{text: "Linear Algebra", filter: [], exclude: ["outdoor", "aaa"]},
 		{text: "GIS", filter: []},
-		{text: "Geomorphology", filter: ["outdoor", "axiom", "nsidc", "full"]},
-		{text: "Climate Science", filter: ["outdoor", "axiom", "nsidc", "full"], highlight: ["elias"]},
-		{text: "Paleoclimatology", filter: ["outdoor", "axiom", "nsidc", "full"]},
+		{text: "Geomorphology", filter: ["outdoor", "aaa", "axiom", "nsidc", "full"]},
+		{text: "Climate Science", filter: ["outdoor", "aaa", "axiom", "nsidc", "full"], highlight: ["elias"]},
+		{text: "Paleoclimatology", filter: ["outdoor", "aaa", "axiom", "nsidc", "full"]},
 
-		{text: "Wilderness First Responder (4/2016)", filter: ["outdoor", "axiom", "full"], highlight: ["elias"]},
-		{text: "AAI Level 1 Avalanche Fundamentals (12/2016)", filter: ["outdoor", "full"]},
-		{text: "CPR & AED (4/2016)", filter: ["outdoor", "full"], highlight: ["elias"]},
+		{text: "Wilderness First Responder (4/2016)", filter: ["outdoor", "aaa", "axiom", "full"], highlight: ["elias"]},
+		{text: "AAI Level 1 Avalanche Fundamentals (12/2016)", filter: ["outdoor", "aaa", "full"]},
+		{text: "CPR & AED (4/2016)", filter: ["outdoor", "aaa", "full"], highlight: ["elias"]},
 		{text: "Wilderness First Aid (4/2012 & 4/2014)", filter: ["full"]},
-		{text: "A-100 basic aviation safety (6/2015)", filter: ["outdoor", "full"]},
-		{text: "ASI ATV RiderCourse (6/2015)", filter: ["outdoor", "full"]},
-		{text: "Swiftwater Rescue (9/2012)", filter: ["outdoor", "full"]},
+		{text: "A-100 basic aviation safety (6/2015)", filter: ["outdoor", "aaa", "full"]},
+		{text: "ASI ATV RiderCourse (6/2015)", filter: ["outdoor", "aaa", "full"]},
+		{text: "Swiftwater Rescue (9/2012)", filter: ["outdoor", "aaa", "full"]},
 	];
 
 	$scope.skills = {
@@ -364,7 +360,7 @@ resumeModule.controller('resume', function($scope, $location) {
 			link: "http://www.tuftsmountainclub.org/activities",
 			position: "Web developer",
 			dates: "2013 - 2015",
-			exclude: ["outdoor"],
+			exclude: ["outdoor", "aaa"],
 			items: [
 				{
 					text: "Created quick-turnaround web services to help club functions",
@@ -376,8 +372,8 @@ resumeModule.controller('resume', function($scope, $location) {
 					filter: []
 				},
 				{
-					text: "Developed vehicle reservation, online shopping, trip-posting, and reimbursement-processing systems",
-					filter: ["full"]
+					text: "Developed vehicle reservation, online shopping, trip-posting, reimbursement-processing, and budgeting systems",
+					filter: []
 				}
 			]
 		},
@@ -394,17 +390,17 @@ resumeModule.controller('resume', function($scope, $location) {
 				},
 				{
 					text: "Led outdoor instructional trips in ice climbing, single- and multi-pitch rock climbing, whitewater kayaking, backpacking, and hiking",
-					filter: ["outdoor"],
+					filter: ["outdoor", "aaa"],
 					highlight: ["elias"]
 				},
 				{
 					text: "Wrote emergency response protocols used by trip leaders and lodge caretakers",
-					filter: ["outdoor"],
+					filter: ["outdoor", "aaa"],
 					highlight: ["elias"]
 				},
 				{
 					text: "Organized and taught seminars on outdoor skills, including rock climbing anchor building, rappelling safety, single-pitch climbing group and site management, lead climbing & belaying, ice climbing technique, rigging and pulley systems, map & compass navigation, winter hiking safety, basic whitewater kayak strokes & wet exiting, and rolling technique",
-					filter: ["outdoor"]
+					filter: ["outdoor", "aaa"]
 				},
 				{
 					text: "Supervised 17-member executive board and delegated responsibilities",
@@ -413,7 +409,7 @@ resumeModule.controller('resume', function($scope, $location) {
 				{
 					text: "Collaborated with university administrators to improve club function",
 					filter: [],
-					exclude: ["outdoor"]
+					exclude: ["outdoor", "aaa"]
 				},
 				{
 					text: "Developed and led long-term technical and safety curriculum",
@@ -421,7 +417,7 @@ resumeModule.controller('resume', function($scope, $location) {
 				},
 				{
 					text: "Managed response to outdoor emergencies on club trips in collaboration with emergency personnel and university Public Safety administrators",
-					filter: ["outdoor"],
+					filter: ["outdoor", "aaa"],
 					highlight: []
 				},
 				{
@@ -442,7 +438,7 @@ resumeModule.controller('resume', function($scope, $location) {
 			link: "https://viceaxe.com/events/vice-fest/",
 			position: "Equipment Coordinator",
 			dates: "2013 - 2015",
-			filter: ["outdoor", "full"],
+			filter: ["outdoor", "aaa", "full"],
 			items: [
 				{
 					text: "Supervised 5-person team in distributing and collecting hundreds of pieces of gear for ice climbing festival",
@@ -455,7 +451,7 @@ resumeModule.controller('resume', function($scope, $location) {
 				},
 				{
 					text: "Designed inventory system allowing return of gear from dozens of sponsors to original owners with zero losses",
-					filter: ["full"]
+					filter: ["full", "aaa"]
 				},
 				{
 					text: "Assisted participants with fitting mountaineering boots and crampons",
@@ -473,7 +469,7 @@ resumeModule.controller('resume', function($scope, $location) {
 			link: "http://www.tuftswildernessorientation.com",
 			position: "Trip Leader",
 			dates: "2013 - 2014",
-			filter: ["outdoor", "full"],
+			filter: ["outdoor", "aaa", "full"],
 			items: [
 				{
 					text: "Co-led groups of 8 students on 5-day backpacking trips in New Hampshire",
