@@ -326,7 +326,7 @@ resumeModule.controller('resume', function($scope, $location) {
 		{text: "Wilderness First Aid (4/2012 & 4/2014)", filter: ["full"]},
 		{text: "A-100 basic aviation safety (6/2015)", filter: ["outdoor", "aaa", "full"]},
 		{text: "ASI ATV RiderCourse (6/2015)", filter: ["outdoor", "aaa", "full"]},
-		{text: "Swiftwater Rescue (9/2012)", filter: ["outdoor", "aaa", "full"]},
+		{text: "ACA Basic Swiftwater Rescue (9/2012)", filter: ["outdoor", "aaa", "full"]},
 	];
 
 	$scope.skills = {
